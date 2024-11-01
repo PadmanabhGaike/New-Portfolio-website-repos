@@ -1,26 +1,24 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const { Pool } = require('pg');
+const { createClient } = require('@supabase/supabase-js');
 const axios= require('axios');
 const path = require('path');
 const PORT = 5500;
+require('dotenv').config();
 
 const app = express();
 
 
-const pool = new Pool({
-  user: 'postgres',
-  host: '127.0.0.1',
-  database: 'contact_form',
-  password: 'Paddy_12',
-  port: 5432,
-});
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_ANON_KEY;
+const supabase = createClient(supabaseUrl, supabaseKey)
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const RECAPTCHA_SECRET_KEY = '6LejKGUqAAAAAL0yy3_UUX9N1L_gUfdn3IetKwvg';
+const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
@@ -47,16 +45,19 @@ app.post('/submit', async (req, res) => {
       return res.status(400).send('reCAPTCHA verification failed.');
     }
 
-      await pool.query(
-          'INSERT INTO contacts (name, email, message) VALUES ($1, $2, $3)',
-          [name, email, message]
-      );
+    const { data, error } = await supabase
+    .from('contacts')
+    .insert([
+      { name, email, message }
+    ]);
+
+  if (error) throw error;
       
 
       res.status(200).send('Form submitted successfully');
 
   } catch (err) {
-      console.error('Error inserting data into PostgreSQL', err);
+      console.error('Error inserting data: ', err);
       res.status(500).send('Something went wrong');
   }
 });
