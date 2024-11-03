@@ -35,7 +35,7 @@ app.get('/index.html', (req, res) => {
 });
 
 
-app.post('/submit', async (req, res) => {
+app.post('/.netlify/functions/submit', async (req, res) => {
   console.log('Received POST request:', req.body);
   const { name, email, message, 'g-recaptcha-response': recaptchaResponse } = req.body;
 
