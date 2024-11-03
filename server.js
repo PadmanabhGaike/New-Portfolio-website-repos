@@ -22,7 +22,7 @@ const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
-});
+}); 
 
 
 app.get('/index.html', (req, res) => {
@@ -30,7 +30,7 @@ app.get('/index.html', (req, res) => {
 });
 
 
-app.post('/.netlify/functions/submit', async (req, res) => {
+app.post('/submit', async (req, res) => {
   console.log('Received POST request:', req.body);
   const { name, email, message, 'g-recaptcha-response': recaptchaResponse } = req.body;
 
