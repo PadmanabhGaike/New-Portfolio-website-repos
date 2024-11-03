@@ -9,6 +9,11 @@ require('dotenv').config();
 const app = express();
 
 
+const cors = require('cors');
+app.use(cors()); 
+ 
+
+
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_ANON_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey)
@@ -67,6 +72,4 @@ app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
 
-const cors = require('cors');
-app.use(cors({origin:'https://padmanabh.netlify.app'}));
 
