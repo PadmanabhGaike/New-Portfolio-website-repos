@@ -68,5 +68,5 @@ app.listen(PORT, () => {
 });
 
 const cors = require('cors');
-app.use(cors());
+app.use(cors({origin:'https://padmanabh.netlify.app'}));
 
