@@ -349,6 +349,10 @@
         
         function openContactForm() {
           var form = document.getElementById("contact-form");
+          var thankYouMessage = document.getElementById("thankYouMessage");
+
+            thankYouMessage.style.display = "none";
+
           if (form.style.display === "none" || form.style.display === "") {
             form.style.display = "block";
           } else {
