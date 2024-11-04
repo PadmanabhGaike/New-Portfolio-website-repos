@@ -38,13 +38,24 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     const ContactForm= document.getElementById('contact-form');
     const thankYouMessage= document.getElementById('thankYouMessage');
 
-    ContactForm.form.display='block';
-    thankYouMessage.style.display='none';
+
+    if (contactFormContainer && thankYouMessage){
+
+      ContactForm.form.display='block';
+      thankYouMessage.style.display='none';
+  
+
+      const formElement = contactFormContainer.querySelector('form');
+        if (formElement) {
+          ContactForm.reset();
+    }
+   
 
 
-    ContactForm.reset();
+    
 
     if (typeof grecaptcha !== 'undefined'){
       grecaptcha.reset();
     }
   }
+}
