@@ -25,6 +25,11 @@ document.getElementById('contact-form').addEventListener('submit', async functio
       if (response.ok) {
         document.getElementById('contact-form').style.display = 'none';
         document.getElementById('thankYouMessage').style.display = 'block';
+
+        document.getElementById('contact-form').reset();
+
+        grecaptcha.reset();
+        
       } else {
         alert('There was an issue submitting your message. Please try again later.');
       }
