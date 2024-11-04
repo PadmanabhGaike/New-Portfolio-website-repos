@@ -459,6 +459,7 @@ footer{
    visibility: hidden;
    opacity: 0;
    transition: opacity 0.3s ease;
+   margin: 0;
   }
 
   #contact-form.show {
