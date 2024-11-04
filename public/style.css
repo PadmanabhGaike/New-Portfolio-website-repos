@@ -27,7 +27,6 @@ section, nav, footer, .contact-form {
 
 html{
     scroll-behavior: smooth;
-    overflow: hidden;
 }
 
 p{
@@ -99,7 +98,6 @@ section{
 
 .section-container{
     display: flex;
-    padding: 0 10rem;
 }
 
 section#profie {
