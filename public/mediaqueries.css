@@ -2,7 +2,7 @@
 @media (max-width: 768px) {
     .section-container, .about-details-container, .experience-details-container {
         flex-direction: column;
-        padding: 0 2rem; /* Adjust padding for smaller screens */
+        padding: 0 1rem; /* Adjust padding for smaller screens */
     }
 
     #experience, #about, #contact {
