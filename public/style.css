@@ -396,6 +396,7 @@ article .icon{
 
 
 #contact{
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -455,6 +456,12 @@ footer{
 
 
 #contact-form {
-    display: none;
-    margin-top: 20px;
+   visibility: hidden;
+   opacity: 0;
+   transition: opacity 0.3s ease;
   }
+
+  #contact-form.show {
+    visibility: visible;
+    opacity: 1;
+}
