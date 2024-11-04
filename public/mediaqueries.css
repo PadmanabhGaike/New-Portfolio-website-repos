@@ -1,31 +1,30 @@
-@media screen and (max-width:1400px) {
-    #profile{
-        height: 83vh;
-        margin-bottom: 6rem;
-        width: 100%;
+/* For tablets */
+@media (max-width: 768px) {
+    .section-container, .about-details-container, .experience-details-container {
+        flex-direction: column;
+        padding: 0 2rem; /* Adjust padding for smaller screens */
     }
-    .about-containers{
-        flex-wrap: wrap;
+
+    #experience, #about, #contact {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .section__pic-container1, .section__text {
+        max-width: 100%;
+        padding: 1rem;
     }
 }
 
-
-@media screen and (max-width:1200px) {
-    #desktop-nav{
-        display: none;
+/* For mobile devices */
+@media (max-width: 480px) {
+    .title, .aboutTitle {
+        font-size: 2.5rem; /* Scale down title sizes */
     }
-
-    #experience, .experience-details-container{
-        margin-top: 2rem;
+    .icon {
+        height: 1.5rem; /* Adjust icon sizes */
     }
-
-    #profile, .section-container{
-        display: block;
-    }
-    section, .section-container{
-        height: fit-content;
-    }
-    section{
-        margin: 0 5%;
+    #socials-container {
+        gap: 0.5rem; /* Reduce spacing between social icons */
     }
 }
