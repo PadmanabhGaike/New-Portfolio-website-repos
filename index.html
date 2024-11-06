@@ -345,12 +345,13 @@
           var thankYouMessage = document.getElementById("thankYouMessage");
 
             thankYouMessage.style.display = "none";
+            form.style.display="block";
             
-            if (form.classList.contains("show")) {
-                form.classList.remove("show");
-            }else {
-                form.classList.add("show");
-            }
+            
+            if (!form.classList.contains("show")) {
+                 form.classList.add("show");
+        }
+  
     }
       </script>
       

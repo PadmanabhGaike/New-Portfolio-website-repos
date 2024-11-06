@@ -25,8 +25,6 @@ document.getElementById('contact-form').addEventListener('submit', async functio
       if (response.ok) {
         document.getElementById('contact-form').style.display = 'none';
         document.getElementById('thankYouMessage').style.display = 'block';
-
-     
         
         document.getElementById('contactForm').reset();
 
