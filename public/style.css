@@ -396,11 +396,11 @@ article .icon{
 
 
 #contact{
-    min-height: 100vh;
+   
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 90vh;
+    height: fit-content; 
     padding-top: 4rem;
     margin: 0;
 }
