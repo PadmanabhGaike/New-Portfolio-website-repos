@@ -397,10 +397,9 @@ article .icon{
 
 #contact{
     display: flex;
-    min-height: 100rem;
     justify-content: center;
     flex-direction: column;
-    height: 90vh;
+    height: fit-content;
     padding-top: 4rem;
     margin: 0;
 }
