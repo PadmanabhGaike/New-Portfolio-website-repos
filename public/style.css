@@ -396,11 +396,11 @@ article .icon{
 
 
 #contact{
-   
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: fit-content; 
+    height: fit-content;
     padding-top: 4rem;
     margin: 0;
 }
@@ -451,10 +451,7 @@ input, textarea, button {
 }
 
 footer{
-    padding-bottom:0rem;
-    position: relative;
-    bottom: 16rem;
-    height: 1rem;
+    padding-bottom: 4rem;
 }
 
 
