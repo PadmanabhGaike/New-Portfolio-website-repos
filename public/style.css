@@ -27,7 +27,6 @@ section, nav, footer, .contact-form {
 
 html{
     scroll-behavior: smooth;
-    overflow: hidden;
 }
 
 p{
@@ -99,7 +98,6 @@ section{
 
 .section-container{
     display: flex;
-    padding: 0 10rem;
 }
 
 section#profie {
@@ -398,10 +396,11 @@ article .icon{
 
 
 #contact{
+   
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 90vh;
+    height: fit-content; 
     padding-top: 4rem;
     margin: 0;
 }
@@ -452,11 +451,18 @@ input, textarea, button {
 }
 
 footer{
-    padding-bottom: 4rem;
+    padding-bottom:0rem;
 }
 
 
 #contact-form {
-    display: none;
-    margin-top: 20px;
+   visibility: hidden;
+   opacity: 0;
+   transition: opacity 0.3s ease;
+   margin: 0;
   }
+
+  #contact-form.show {
+    visibility: visible;
+    opacity: 1;
+}
