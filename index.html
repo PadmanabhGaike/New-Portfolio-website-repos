@@ -342,13 +342,13 @@
           var thankYouMessage = document.getElementById("thankYouMessage");
 
             thankYouMessage.style.display = "none";
-            
-            if (form.classList.contains("show")) {
-                form.classList.remove("show");
-            }else {
-                form.classList.add("show");
-            }
-    }
+
+          if (form.style.display === "none" || form.style.display === "") {
+            form.style.display = "block";
+          } else {
+            form.style.display = "none";
+          }
+        }
       </script>
       
 <script src="public/formHandeler.js"></script>
