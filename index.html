@@ -344,16 +344,14 @@
           var form = document.getElementById("contact-form");
           var thankYouMessage = document.getElementById("thankYouMessage");
 
-          thankYouMessage.style.display = "none";
+            thankYouMessage.style.display = "none";
 
-    // Toggle form display: show if hidden, hide if visible
-    if (form.style.display === "none" || form.style.display === "") {
-      form.style.display = "block";
-    } else {
-      form.style.display = "none";
-    }
-  
-    }
+          if (form.style.display === "none" || form.style.display === "") {
+            form.style.display = "block";
+          } else {
+            form.style.display = "none";
+          }
+        }
       </script>
       
 <script src="public/formHandeler.js"></script>
