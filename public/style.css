@@ -452,6 +452,9 @@ input, textarea, button {
 
 footer{
     padding-bottom:0rem;
+    position: relative;
+    bottom: 16rem;
+    height: 1rem;
 }
 
 
