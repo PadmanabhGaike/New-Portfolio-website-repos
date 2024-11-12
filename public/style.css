@@ -22,7 +22,7 @@ body{
 }
 
 section, nav, footer, .contact-form {
-    width: 100%;
+    width: 100% !important;
 }    
 
 html{
@@ -458,4 +458,9 @@ footer{
 #contact-form {
     display: none;
     margin-top: 20px;
+  }
+
+  img{
+    max-width: 100%;
+    height: auto;
   }
