@@ -137,3 +137,27 @@
         font-size: 0.9rem;
     }
 }
+
+/* Target iPhone 12 and similar screen sizes */
+@media screen and (max-width: 400px) {
+    #experience {
+        padding: 1rem; /* Reduce padding for experience */
+    }
+
+    #contact {
+        margin-top: 2rem; /* Adds spacing above the contact section */
+        padding: 2rem 1rem; /* Ensure adequate padding within the contact section */
+        min-height: auto; /* Adjust height so it doesn’t force overlap */
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .experience-details-container, .contact-info-upper-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+}
