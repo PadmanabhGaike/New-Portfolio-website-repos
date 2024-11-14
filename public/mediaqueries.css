@@ -1,6 +1,6 @@
 /* Existing styles up to 1400px */
 @media screen and (max-width: 1400px) {
-    #profile {
+    #profie {
         height: 83vh;
         margin-bottom: 6rem;
         width: 100%;
@@ -20,7 +20,7 @@
         margin-top: 2rem;
     }
 
-    #profile, .section-container {
+    #profie, .section-container {
         display: block;
     }
     section, .section-container {
