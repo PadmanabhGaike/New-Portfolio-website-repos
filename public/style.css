@@ -383,11 +383,13 @@ article .icon{
     
     
     height: .2rem;  
-  
+    width: 90%;
     background-color:black;
     border-radius: 2rem;
     margin-left:3rem;
     margin-right: 3rem;
+    clear: both;
+    box-sizing: border-box;
     
 }
 .Container{
