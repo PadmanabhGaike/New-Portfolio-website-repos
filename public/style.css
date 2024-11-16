@@ -22,7 +22,7 @@ body{
 }
 
 section, nav, footer, .contact-form {
-    max-width: 60rem;
+    width: 100% !important;
 }    
 
 html{
@@ -47,7 +47,7 @@ nav, .nav-links{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 16vh;
+    height: 16vh;
     
     transition: color 0.3s ease;
 }
@@ -90,6 +90,7 @@ a:hover{
 
 section{
  padding-top: 4vh;
+ height: 96vh;
  margin: 0 10rem;
  box-sizing: border-box;
  min-height: fit-content;   
@@ -105,10 +106,9 @@ section#profie {
     gap: 5rem;
     background-color: white;
     margin: 0; 
-    min-height: 100vh;     
+    height: 100vh;     
     overflow: hidden;
     padding: 0;
-    max-width: 60rem;
     
 }
 
@@ -120,7 +120,7 @@ section#profie {
         left: 10%; 
         z-index: 1; 
         color: white; 
-        max-width: 60rem;     
+        max-width: 400px;     
     }
     
    
@@ -128,19 +128,20 @@ section#profie {
 
 .section__pic-container{
     display: flex;
+   
     margin: auto 0;
     color: bisque;
     position: absolute;     
     top: 0;     
     left: 0;     
-    max-width: 60rem;     
-    min-height: 100%;     
+    width: 100%;     
+    height: 100%;     
     z-index: 0;     
     filter: brightness(50%);
 }
 
 .section__pic-container img {
-    max-width: 100%;     
+    width: 100%;     
     height: auto    ;     
     object-fit: cover;     
     display: block; 
