@@ -104,10 +104,11 @@ section#profie {
     display: flex;
     justify-content: center;
     gap: 5rem;
-    height: 83vh;
     background-color: white;
-    margin: 0;
-    position: relative;     height: 100vh;     overflow: hidden;
+    margin: 0; 
+    height: 100vh;     
+    overflow: hidden;
+    padding: 0;
     
 }
 

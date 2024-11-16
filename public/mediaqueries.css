@@ -27,7 +27,25 @@
         height: fit-content;
     }
     section {
-        margin: 0 5%;
+        margin: 0;
+        height: auto;
+        min-height: fit-content;
+    }
+
+    .Container{
+        margin: 0;
+        padding: 0;
+    }
+
+    #profie{
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .bar {
+        margin: 0;
+        width: 100%;
     }
 }
 
@@ -56,7 +74,7 @@
 
 /* Small screens - Tablets and large mobile devices */
 @media screen and (max-width: 768px) {
-    #profile, #about, #experience, #contact {
+     #about, #experience, #contact {
         margin: 0;
         padding: 2rem 1rem;
     }
@@ -88,6 +106,18 @@
         width: 100%;
 
         margin: 1.5rem auto;
+    }
+
+    #profile {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+    
+    section {
+        padding: 2rem 1rem;
+        margin: 0;
+        height: auto;
     }
 }
 
@@ -122,6 +152,8 @@
     .experience-details-container {
         padding: 1rem;
     }
+
+    
 }
 
 /* Extra small screens - Extra small mobile devices */
