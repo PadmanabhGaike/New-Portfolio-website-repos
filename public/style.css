@@ -318,6 +318,7 @@ section#profie {
     height: auto;
     display: flex;
     min-height: fit-content;
+    padding-top: 9rem;
 }
 
 
@@ -367,7 +368,7 @@ section#profie {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-top: 2rem ;
+    padding-top: 9rem ;
 }
 
 .article-container{
